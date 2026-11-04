@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-11-04T15:23:25",
+  "model": "openai/gpt-oss-20b",
+  "role": "Frontend Developer",
+  "difficulty": "Easy",
+  "turns": [
+    {
+      "question": {
+        "topic": "HTML semantics",
+        "question": "What is the purpose of the <main> element in HTML5 and how does it differ from a generic <div>?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    },
+    {
+      "question": {
+        "topic": "CSS specificity",
+        "question": "How does CSS specificity determine which style rule is applied when multiple rules target the same element?"
+      },
+      "answer": "CSS Specificity is a set of rules used by browsers to determine which CSS style should be applied when multiple CSS selectors target the same HTML element.",
+      "evaluation": {
+        "correctness": 8,
+        "depth": 3,
+        "clarity": 9,
+        "strengths": [
+          "Clear and concise explanation",
+          "Accurately states purpose of specificity",
+          "Easy to understand"
+        ],
+        "weaknesses": [
+          "No detail on how specificity is calculated",
+          "Lacks examples of selector types",
+          "Does not mention cascade or importance"
+        ],
+        "feedback": "Good start, but add how IDs, classes, elements contribute to specificity and give a simple example.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Event bubbling",
+        "question": "What is event bubbling in JavaScript and how does it affect event handling on nested elements?"
+      },
+      "answer": "Event bubbling in JavaScript is the process in which an event triggered on a child element propagates upward to its parent elements in the DOM hierarchy. For example, clicking a button inside a <div> triggers the button's event handler first, followed by the parent's event handler. It helps simplify event handling through event delegation, while event.stopPropagation() can be used to prevent the event from reaching parent elements.",
+      "evaluation": {
+        "correctness": 9,
+        "depth": 6,
+        "clarity": 8,
+        "strengths": [
+          "Clear definition of bubbling",
+          "Good example of nested elements",
+          "Mentioned stopPropagation"
+        ],
+        "weaknesses": [
+          "Lacks detail on event phases",
+          "No mention of capturing phase",
+          "Could explain delegation benefits"
+        ],
+        "feedback": "Great concise explanation; adding a note on capturing and delegation would strengthen your answer.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Variable scope",
+        "question": "In JavaScript, how does the scope of a variable declared with let inside a block differ from one declared with var at the function level?"
+      },
+      "answer": "In JavaScript, a variable declared with `let` has block scope, meaning it can only be accessed within the block `{}` where it is declared. In contrast, a variable declared with `var` has function scope, meaning it can be accessed throughout the function in which it is declared, even outside the block. Thus, `let` provides better control over variable access and helps avoid unintended modifications.",
+      "evaluation": {
+        "correctness": 9,
+        "depth": 6,
+        "clarity": 9,
+        "strengths": [
+          "Accurate explanation of block vs function scope",
+          "Clear distinction between let and var",
+          "Concise and easy to understand"
+        ],
+        "weaknesses": [
+          "Lacks mention of hoisting differences",
+          "No example code",
+          "Doesn't note that var is function-scoped even outside blocks"
+        ],
+        "feedback": "Great explanation of scope differences; consider adding a brief example and noting hoisting behavior for completeness.",
+        "red_flag": false,
+        "skipped": false
+      }
+    }
+  ],
+  "score": {
+    "overall": 56.8,
+    "rating": "Borderline",
+    "dimension_averages": {
+      "correctness": 6.5,
+      "depth": 3.75,
+      "clarity": 6.5
+    },
+    "per_answer": [
+      0.0,
+      67.0,
+      79.0,
+      81.0
+    ],
+    "red_flags": 0,
+    "answered": 3,
+    "skipped": 1,
+    "formula": "answer score = 10 x (0.5*correctness + 0.3*depth + 0.2*clarity) - 10 if red flag (min 0); overall = mean of answer scores; skipped questions count as 0."
+  },
+  "report": {
+    "summary": "The candidate demonstrated solid knowledge of event handling and variable scoping, with clear, concise explanations. However, they missed the HTML semantics question and provided limited depth on CSS specificity. The interview highlights strengths in clarity and examples, while revealing gaps in breadth and detail.",
+    "strengths": [
+      "Clear definition and example of event bubbling (topic: Event bubbling)",
+      "Accurate explanation of block vs function scope for let and var (topic: Variable scope)",
+      "Concise and easy-to-understand answers (topics: Event bubbling, Variable scope)",
+      "Good use of examples in event bubbling answer (topic: Event bubbling)",
+      "High clarity scores for event bubbling and variable scope (topics: Event bubbling, Variable scope)"
+    ],
+    "weaknesses": [
+      "Skipped HTML semantics question (topic: HTML semantics)",
+      "Limited depth on CSS specificity calculation and examples (topic: CSS specificity)",
+      "No mention of cascade or importance in specificity answer (topic: CSS specificity)",
+      "Missing details on event phases and capturing phase (topic: Event bubbling)",
+      "No examples or code snippets for variable scope answer (topic: Variable scope)"
+    ],
+    "improvement_plan": [
+      {
+        "focus": "HTML semantics",
+        "action": "Study the purpose and usage of semantic elements like <header>, <nav>, <main>, <article>, and <footer> and practice marking up a sample page using these tags.",
+        "why": "Candidate skipped the question, indicating a knowledge gap in HTML5 semantics."
+      },
+      {
+        "focus": "CSS specificity",
+        "action": "Review the specificity calculation rules (inline, IDs, classes, attributes, elements) and create a cheat sheet with example selectors to reinforce the concept.",
+        "why": "Answer lacked detail on calculation and examples, showing insufficient depth."
+      },
+      {
+        "focus": "Event phases",
+        "action": "Read about the three phases of event propagation (capturing, target, bubbling) and implement a small demo that logs each phase using addEventListener with useCapture flag.",
+        "why": "Answer omitted capturing phase and event phases, limiting completeness."
+      },
+      {
+        "focus": "Variable scope details",
+        "action": "Add examples illustrating hoisting differences between let/var and show how var can be accessed outside blocks, then practice writing code snippets that demonstrate these behaviors.",
+        "why": "Answer lacked hoisting and code examples, indicating a shallow treatment."
+      }
+    ]
+  }
+}

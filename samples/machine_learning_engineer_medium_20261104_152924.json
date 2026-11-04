@@ -1,0 +1,171 @@
+{
+  "timestamp": "2026-11-04T15:29:24",
+  "model": "openai/gpt-oss-20b",
+  "role": "Machine Learning Engineer",
+  "difficulty": "Medium",
+  "turns": [
+    {
+      "question": {
+        "topic": "Model Debugging",
+        "question": "Describe how you would diagnose and fix a sudden drop in validation accuracy for a deep neural network trained on a balanced dataset."
+      },
+      "answer": "I would first check whether the validation data and preprocessing are correct and consistent with the training data. Then, I would examine the training and validation loss to identify issues like overfitting, learning rate problems, or incorrect labels. I would also check for changes in model parameters and data distribution. Based on the findings, I would adjust the learning rate, use regularization or dropout, verify the data pipeline, and retrain the model. Finally, I would evaluate it again to ensure the validation accuracy improves.",
+      "evaluation": {
+        "correctness": 9,
+        "depth": 6,
+        "clarity": 8,
+        "strengths": [
+          "Considers data preprocessing consistency",
+          "Identifies overfitting and learning rate issues",
+          "Suggests concrete fixes like dropout and LR adjustment"
+        ],
+        "weaknesses": [
+          "Lacks specific diagnostic metrics (e.g., learning curves)",
+          "No mention of validation set leakage checks",
+          "No example of a concrete trade‑off"
+        ],
+        "feedback": "Good overall, but include specific diagnostics and a concrete example of a trade‑off to boost depth.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Overfitting Prevention",
+        "question": "You have a convolutional neural network that achieves 98% training accuracy but only 75% validation accuracy. What practical steps would you take to diagnose and reduce overfitting in this model?"
+      },
+      "answer": "I would first identify the overfitting by comparing training and validation loss. To reduce it, I would:\n1. Data Augmentation: Apply random rotations, flips, and cropping to increase training data variety.\n2. Dropout: Add dropout layers to prevent the model from depending too much on specific neurons.\n3. Regularization: Use L1 or L2 regularization to reduce model complexity.\n4. Early Stopping: Stop training when validation loss starts increasing.\n5. Reduce Model Complexity: Decrease the number of layers or neurons if the model is too complex.\n6. More Training Data: Collect additional diverse training samples if possible.\nFinally, I would retrain the model and compare training and validation accuracy to check whether the gap has reduced.",
+      "evaluation": {
+        "correctness": 10,
+        "depth": 6,
+        "clarity": 9,
+        "strengths": [
+          "Comprehensive list of practical remedies",
+          "Clear structure with numbered steps",
+          "Includes both data and model adjustments"
+        ],
+        "weaknesses": [
+          "Lacks discussion of trade-offs or specific examples",
+          "No mention of monitoring validation loss curves",
+          "Doesn't address potential data imbalance"
+        ],
+        "feedback": "Great list of overfitting fixes; consider adding concrete examples or trade-offs to deepen your answer.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Model Calibration",
+        "question": "A classification model you deployed shows high accuracy but its predicted probabilities are poorly calibrated. How would you assess and improve its probability calibration in a production setting?"
+      },
+      "answer": "I would first evaluate calibration using a reliability diagram and metrics like Brier score and Expected Calibration Error (ECE). I would compare predicted probabilities with actual outcomes to identify overconfidence or underconfidence. To improve calibration, I would apply techniques such as Platt scaling or Isotonic regression using a separate validation dataset. In production, I would continuously monitor calibration, track changes in data distribution, and periodically recalibrate the model to maintain reliable probability predictions.",
+      "evaluation": {
+        "correctness": 10,
+        "depth": 8,
+        "clarity": 9,
+        "strengths": [
+          "Uses reliability diagram, Brier score, ECE for assessment",
+          "Mentions Platt scaling and Isotonic regression for recalibration",
+          "Highlights continuous monitoring and periodic recalibration"
+        ],
+        "weaknesses": [
+          "Lacks specific example of monitoring metrics",
+          "Does not discuss trade-offs of scaling methods",
+          "No mention of validation data split strategy"
+        ],
+        "feedback": "Great assessment and improvement plan; consider adding concrete monitoring examples and trade-offs between scaling techniques.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Data Augmentation",
+        "question": "In a computer vision pipeline, you observe that augmenting training images improves test accuracy but increases training time significantly. How would you decide which augmentation techniques to keep, and what trade‑offs would you consider between performance gains and computational cost?"
+      },
+      "answer": "I would evaluate each augmentation technique individually to measure its impact on test accuracy and training time. I would keep techniques that provide significant accuracy improvements without adding excessive computational cost. I would also consider whether the transformations are realistic for the dataset. Lightweight techniques like flipping, cropping, and rotation are generally preferable. I would remove redundant or expensive augmentations and consider GPU-based or offline augmentation to improve efficiency. Finally, I would compare the overall performance and training time to choose the best combination.",
+      "evaluation": {
+        "correctness": 8,
+        "depth": 7,
+        "clarity": 8,
+        "strengths": [
+          "Clear evaluation strategy",
+          "Considers realism of augmentations",
+          "Balances accuracy and cost"
+        ],
+        "weaknesses": [
+          "Lacks concrete examples",
+          "Doesn't quantify trade-offs",
+          "Missing discussion of offline vs on‑the‑fly"
+        ],
+        "feedback": "Good approach, but add specific augmentation examples and quantify the accuracy vs time trade‑offs.",
+        "red_flag": false,
+        "skipped": false
+      }
+    }
+  ],
+  "score": {
+    "overall": 83.5,
+    "rating": "Good",
+    "dimension_averages": {
+      "correctness": 9.25,
+      "depth": 6.75,
+      "clarity": 8.5
+    },
+    "per_answer": [
+      79.0,
+      86.0,
+      92.0,
+      77.0
+    ],
+    "red_flags": 0,
+    "answered": 4,
+    "skipped": 0,
+    "formula": "answer score = 10 x (0.5*correctness + 0.3*depth + 0.2*clarity) - 10 if red flag (min 0); overall = mean of answer scores; skipped questions count as 0."
+  },
+  "report": {
+    "summary": "The candidate demonstrates solid technical knowledge across key ML engineering topics, with clear, structured responses and practical solutions. Strengths include thorough diagnostic approaches, comprehensive overfitting mitigation, and detailed calibration strategies. Weaknesses involve missing concrete metrics, trade‑off discussions, and specific implementation details.",
+    "strengths": [
+      "Considers data preprocessing consistency in Model Debugging",
+      "Identifies overfitting and learning rate issues",
+      "Provides a comprehensive, step‑by‑step overfitting prevention plan",
+      "Uses reliability diagram, Brier score, and ECE for calibration assessment",
+      "Balances accuracy and computational cost in Data Augmentation"
+    ],
+    "weaknesses": [
+      "Lacks specific diagnostic metrics (e.g., learning curves) in Model Debugging",
+      "No mention of validation set leakage checks",
+      "No discussion of trade‑offs or specific examples in overfitting prevention",
+      "Does not quantify trade‑offs in Data Augmentation",
+      "Missing validation data split strategy for calibration"
+    ],
+    "improvement_plan": [
+      {
+        "focus": "Model Debugging",
+        "action": "Implement and plot learning curves (training vs validation loss) and monitor per‑epoch metrics to pinpoint overfitting or LR issues.",
+        "why": "Candidate noted lack of specific diagnostic metrics."
+      },
+      {
+        "focus": "Overfitting Prevention",
+        "action": "Add a validation set leakage check by ensuring no data from the same source appears in both sets and log validation loss curves to observe overfitting trends.",
+        "why": "Candidate omitted leakage checks and monitoring curves."
+      },
+      {
+        "focus": "Model Calibration",
+        "action": "Create a validation split dedicated to calibration, compute ECE and Brier scores, and schedule periodic recalibration jobs using Platt scaling with cross‑validated hyperparameters.",
+        "why": "Candidate did not mention validation split strategy or monitoring metrics."
+      },
+      {
+        "focus": "Data Augmentation",
+        "action": "Benchmark each augmentation technique individually by measuring test accuracy gains and training time per epoch, then rank by accuracy‑time ratio to decide retention.",
+        "why": "Candidate lacked concrete examples and quantitative trade‑off analysis."
+      },
+      {
+        "focus": "General Practice",
+        "action": "Document all diagnostic steps and decisions in a reproducible notebook, including code snippets for metric calculation and visualization.",
+        "why": "Ensures traceability and addresses missing concrete implementation details."
+      }
+    ]
+  }
+}

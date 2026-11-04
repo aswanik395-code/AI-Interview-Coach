@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-11-04T15:30:58",
+  "model": "openai/gpt-oss-20b",
+  "role": "Product Manager",
+  "difficulty": "Medium",
+  "turns": [
+    {
+      "question": {
+        "topic": "Feature Prioritization",
+        "question": "When two features compete for limited resources, how would you decide which to prioritize and what criteria would you use to justify your decision?"
+      },
+      "answer": "I would prioritize features based on their impact on users, business value, urgency, and implementation effort. I would consider factors such as user demand, alignment with project goals, development time, and available resources. I would also assess the risks and dependencies of each feature. I would prioritize the feature that delivers the highest value with reasonable effort, while considering deadlines and stakeholder feedback.",
+      "evaluation": {
+        "correctness": 8,
+        "depth": 5,
+        "clarity": 7,
+        "strengths": [
+          "Clear criteria list",
+          "Considers both value and effort",
+          "Mentions risk assessment"
+        ],
+        "weaknesses": [
+          "Lacks concrete example",
+          "No trade‑off discussion",
+          "Vague on prioritization method"
+        ],
+        "feedback": "Good framework, but add a specific example and explain how you weigh trade‑offs to strengthen your answer.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "A/B Testing Strategy",
+        "question": "You run a feature that increases user engagement but also adds load to your servers. How would you design an A/B test to evaluate whether the engagement benefit outweighs the performance cost, and what metrics would you track?"
+      },
+      "answer": "I would divide users randomly into two groups: a control group using the existing feature and a test group using the new feature. I would measure engagement metrics such as session duration, click-through rate, and retention, along with server metrics like response time, CPU usage, memory usage, and error rate. I would run the test for a sufficient period to collect reliable data. Finally, I would compare both groups to determine whether the engagement improvement justifies the additional server load without negatively affecting user experience or system performance.",
+      "evaluation": {
+        "correctness": 10,
+        "depth": 6,
+        "clarity": 9,
+        "strengths": [
+          "Clear randomization plan",
+          "Comprehensive metric list",
+          "Balanced focus on engagement and performance"
+        ],
+        "weaknesses": [
+          "Lacks concrete example or trade‑off",
+          "No sample size or statistical significance",
+          "No mention of monitoring thresholds"
+        ],
+        "feedback": "Good structure, but add a specific example and discuss trade‑offs or thresholds to strengthen depth.",
+        "red_flag": false,
+        "skipped": false
+      }
+    },
+    {
+      "question": {
+        "topic": "Incident Response",
+        "question": "When a critical bug is discovered after a product launch, how would you prioritize its resolution, communicate with stakeholders, and prevent similar issues in future releases?"
+      },
+      "answer": "I would first assess the bug's severity, user impact, and urgency. If it affects critical functionality or user data, I would prioritize an immediate fix or rollback. I would inform stakeholders about the issue, its impact, and the expected resolution time through clear and regular updates. After fixing it, I would thoroughly test the solution before redeployment. To prevent similar issues, I would improve automated testing, code reviews, monitoring, and release procedures. Finally, I would conduct a root cause analysis to identify what went wrong and avoid repeating the mistake.",
+      "evaluation": {
+        "correctness": 10,
+        "depth": 7,
+        "clarity": 9,
+        "strengths": [
+          "Clear prioritization logic",
+          "Good stakeholder communication plan",
+          "Comprehensive prevention strategy"
+        ],
+        "weaknesses": [
+          "Lacks specific example of trade‑off",
+          "No mention of impact on roadmap",
+          "Could detail root‑cause analysis steps"
+        ],
+        "feedback": "Great structured response; add a concrete example of a trade‑off you’d face when deciding between quick fix and full rollback.",
+        "red_flag": false,
+        "skipped": false
+      }
+    }
+  ],
+  "score": {
+    "overall": 81.3,
+    "rating": "Good",
+    "dimension_averages": {
+      "correctness": 9.33,
+      "depth": 6.0,
+      "clarity": 8.33
+    },
+    "per_answer": [
+      69.0,
+      86.0,
+      89.0
+    ],
+    "red_flags": 0,
+    "answered": 3,
+    "skipped": 0,
+    "formula": "answer score = 10 x (0.5*correctness + 0.3*depth + 0.2*clarity) - 10 if red flag (min 0); overall = mean of answer scores; skipped questions count as 0."
+  },
+  "report": {
+    "summary": "The candidate demonstrates solid product management fundamentals, especially in prioritization, testing, and incident handling, but lacks concrete examples and detailed trade‑off analysis. Strengths include clear criteria, balanced metrics, and stakeholder communication. Weaknesses revolve around missing real‑world scenarios, statistical rigor, and deeper root‑cause steps.",
+    "strengths": [
+      "Clear prioritization criteria list",
+      "Considers both value and effort",
+      "Mentions risk assessment",
+      "Clear randomization plan for A/B testing",
+      "Comprehensive metric list for engagement and performance",
+      "Good stakeholder communication plan",
+      "Comprehensive prevention strategy"
+    ],
+    "weaknesses": [
+      "Lacks concrete example or trade‑off discussion",
+      "Vague on prioritization method",
+      "No sample size or statistical significance",
+      "No mention of monitoring thresholds",
+      "No specific example of trade‑off",
+      "No mention of impact on roadmap",
+      "Could detail root‑cause analysis steps"
+    ],
+    "improvement_plan": [
+      {
+        "focus": "Feature Prioritization",
+        "action": "Create a case study of a past product decision, detailing the trade‑offs considered and the outcome",
+        "why": "Evidence shows lack of concrete example and trade‑off discussion"
+      },
+      {
+        "focus": "A/B Testing Design",
+        "action": "Draft a full test plan including sample size calculation, statistical significance thresholds, and monitoring alerts",
+        "why": "Evidence shows missing sample size, significance, and thresholds"
+      },
+      {
+        "focus": "Incident Response Detail",
+        "action": "Document a root‑cause analysis template and run a mock post‑mortem on a recent bug",
+        "why": "Evidence shows missing root‑cause steps and roadmap impact"
+      }
+    ]
+  }
+}

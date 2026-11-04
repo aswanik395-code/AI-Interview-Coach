@@ -1,0 +1,161 @@
+{
+  "timestamp": "2026-11-04T15:20:35",
+  "model": "openai/gpt-oss-20b",
+  "role": "Cloud / DevOps Engineer",
+  "difficulty": "Easy",
+  "turns": [
+    {
+      "question": {
+        "topic": "CI/CD Basics",
+        "question": "What is a continuous integration pipeline and why is it important for a Cloud/DevOps Engineer?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    },
+    {
+      "question": {
+        "topic": "Version Control",
+        "question": "What is the purpose of using tags in a Git repository and how might a Cloud/DevOps Engineer use them in a deployment workflow?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    },
+    {
+      "question": {
+        "topic": "Infrastructure as Code",
+        "question": "What is the purpose of using Terraform modules in IaC deployments?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    },
+    {
+      "question": {
+        "topic": "Container Registry",
+        "question": "What is the purpose of a container registry in a Cloud/DevOps workflow?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    },
+    {
+      "question": {
+        "topic": "Rollback Strategy",
+        "question": "What is a basic rollback strategy for a cloud deployment and why is it important for a DevOps engineer?"
+      },
+      "answer": "",
+      "evaluation": {
+        "correctness": 0,
+        "depth": 0,
+        "clarity": 0,
+        "strengths": [],
+        "weaknesses": [
+          "Question was skipped"
+        ],
+        "feedback": "Skipped.",
+        "red_flag": false,
+        "skipped": true
+      }
+    }
+  ],
+  "score": {
+    "overall": 0.0,
+    "rating": "Needs improvement",
+    "dimension_averages": {
+      "correctness": 0.0,
+      "depth": 0.0,
+      "clarity": 0.0
+    },
+    "per_answer": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "red_flags": 0,
+    "answered": 0,
+    "skipped": 5,
+    "formula": "answer score = 10 x (0.5*correctness + 0.3*depth + 0.2*clarity) - 10 if red flag (min 0); overall = mean of answer scores; skipped questions count as 0."
+  },
+  "report": {
+    "summary": "The candidate did not provide any responses to the interview questions, resulting in no observable strengths or weaknesses from the evaluations.",
+    "strengths": [],
+    "weaknesses": [
+      "CI/CD Basics: Question was skipped",
+      "Version Control: Question was skipped",
+      "Infrastructure as Code: Question was skipped",
+      "Container Registry: Question was skipped",
+      "Rollback Strategy: Question was skipped"
+    ],
+    "improvement_plan": [
+      {
+        "focus": "CI/CD Basics",
+        "action": "Review the fundamentals of continuous integration pipelines, focusing on how they automate build, test, and deployment processes in cloud environments.",
+        "why": "The candidate skipped this question, indicating a gap in foundational knowledge."
+      },
+      {
+        "focus": "Version Control",
+        "action": "Study the use of Git tags for marking release points and practice tagging a repository as part of a deployment workflow.",
+        "why": "The candidate skipped this question, showing a lack of demonstrated understanding of tagging in deployment contexts."
+      },
+      {
+        "focus": "Infrastructure as Code",
+        "action": "Explore Terraform module structure and practice creating reusable modules for common infrastructure patterns.",
+        "why": "The candidate skipped this question, suggesting unfamiliarity with modular IaC practices."
+      },
+      {
+        "focus": "Container Registry",
+        "action": "Learn about container registry services (e.g., Docker Hub, AWS ECR) and how they integrate with CI/CD pipelines for image storage and retrieval.",
+        "why": "The candidate skipped this question, indicating a missing grasp of registry roles in DevOps."
+      },
+      {
+        "focus": "Rollback Strategy",
+        "action": "Read about basic rollback mechanisms such as blue-green deployments and canary releases, and simulate a rollback scenario in a test environment.",
+        "why": "The candidate skipped this question, pointing to a lack of knowledge on deployment recovery strategies."
+      }
+    ]
+  }
+}
